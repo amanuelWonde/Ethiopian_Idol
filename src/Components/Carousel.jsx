@@ -52,7 +52,7 @@ function Carousel({}) {
         {slides.map((slide, slidesIndex) => (
           <div
             className={`text-gray-400 duration-500 ${
-              slidesIndex === currentIndex ? "active-period" : ""
+              slidesIndex === currentIndex ? " text-green-500" : ""
             }`}
             key={slidesIndex}
             onClick={() => goToSlide(slidesIndex)}

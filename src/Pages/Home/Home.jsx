@@ -16,10 +16,10 @@ function Home() {
 
         <div className=" flex justify-center w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
-            <Category />
-            <Category />
-            <Category />
-            <Category />
+            <Category img_h={"85%"} des={"Acting"} />
+            <Category img_h={"85%"} des={"Music"} />
+            <Category img_h={"85%"} des={"Commedy"} />
+            <Category img_h={"85%"} des={"Dance"} />
           </div>
         </div>
       </div>
@@ -34,10 +34,30 @@ function Home() {
 
         <div className=" flex justify-center w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
-            <Category />
-            <Category />
-            <Category />
-            <Category />
+            <Category
+              img_h={"75%"}
+              des={"Amazing stage performance that made the juges amazed.."}
+              name={"Amanuel"}
+              vote={"1230 votes"}
+            />
+            <Category
+              img_h={"75%"}
+              name={"Amanuel"}
+              vote={"1230 votes"}
+              des={"Amazing stage performance that made the juges amazed.."}
+            />
+            <Category
+              img_h={"75%"}
+              des={"Amazing stage performance that made the juges amazed.."}
+              name={"Amanuel"}
+              vote={"1230 votes"}
+            />
+            <Category
+              img_h={"75%"}
+              des={"Amazing stage performance that made the juges amazed.."}
+              name={"Amanuel"}
+              vote={"1230 votes"}
+            />
           </div>
         </div>
       </div>
@@ -51,8 +71,14 @@ function Home() {
 
         <div className=" flex justify-center w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
-            <Category />
-            <Category />
+            <Category
+              img_h={"80%"}
+              des={"Amazing opportunity who wants to compte ..."}
+            />
+            <Category
+              img_h={"80%"}
+              des={"Amazing opportunity who wants to compte ..."}
+            />
           </div>
         </div>
       </div>
