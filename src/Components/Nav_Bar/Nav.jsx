@@ -17,7 +17,7 @@ function Nav() {
       <div className=" h-10 bg-white md:hidden">
         <div className=" flex justify-between px-2 py-1 ">
           <h2 className=" text-xl font-bold text-black-100">Logo</h2>
-          <h2 className=" text-xl font-bold text-black-100">Logo</h2>
+          <h2 className=" text-xl font-bold text-black-100">MSS</h2>
         </div>
       </div>
 
