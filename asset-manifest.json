@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Ethiopian_Idol/static/css/main.42a9c2c4.css",
-    "main.js": "/Ethiopian_Idol/static/js/main.d3e53e17.js",
+    "main.css": "/Ethiopian_Idol/static/css/main.7daab2be.css",
+    "main.js": "/Ethiopian_Idol/static/js/main.07eb405c.js",
     "static/media/andras-vas-Bd7gNnWJBkU-unsplash.jpg": "/Ethiopian_Idol/static/media/andras-vas-Bd7gNnWJBkU-unsplash.955a61ef1757f54fcf83.jpg",
     "static/media/domenico-loia-hGV2TfOh0ns-unsplash.jpg": "/Ethiopian_Idol/static/media/domenico-loia-hGV2TfOh0ns-unsplash.d0943fbd57313ac0217f.jpg",
     "static/media/designecologist-Pmh0UoG1vlE-unsplash.jpg": "/Ethiopian_Idol/static/media/designecologist-Pmh0UoG1vlE-unsplash.89aab57f4d47cc67ec04.jpg",
     "static/media/kari-shea-1SAnrIxw5OY-unsplash.jpg": "/Ethiopian_Idol/static/media/kari-shea-1SAnrIxw5OY-unsplash.0989898fac15bd57d713.jpg",
     "static/media/tianyi-ma-WiONHd_zYI4-unsplash.jpg": "/Ethiopian_Idol/static/media/tianyi-ma-WiONHd_zYI4-unsplash.d3527ac8b820627db0ab.jpg",
     "index.html": "/Ethiopian_Idol/index.html",
-    "main.42a9c2c4.css.map": "/Ethiopian_Idol/static/css/main.42a9c2c4.css.map",
-    "main.d3e53e17.js.map": "/Ethiopian_Idol/static/js/main.d3e53e17.js.map"
+    "main.7daab2be.css.map": "/Ethiopian_Idol/static/css/main.7daab2be.css.map",
+    "main.07eb405c.js.map": "/Ethiopian_Idol/static/js/main.07eb405c.js.map"
   },
   "entrypoints": [
-    "static/css/main.42a9c2c4.css",
-    "static/js/main.d3e53e17.js"
+    "static/css/main.7daab2be.css",
+    "static/js/main.07eb405c.js"
   ]
 }
