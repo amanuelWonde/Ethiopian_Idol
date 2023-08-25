@@ -1,112 +1,123 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../../Components/Carousel";
 import Category from "./Category";
-import CategoryTwo from "./CategoryTwo";
+import VideoComponent from "./VideoComponent";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import danceThemnail from "../../Images/Category/aditya-ali-SzI4No8rQ14-unsplash.jpg";
+import musicThemnail from "../../Images/Category/matt-botsford-OKLqGsCT8qs-unsplash.jpg";
+import actingThemnail from "../../Images/Category/jon-tyson-A-obUh61bKw-unsplash.jpg";
+import commedyThemnail from "../../Images/Category/michel-grolet-NBRNK4XC1k8-unsplash.jpg";
+import ReactCarousel from "../../Components/ReactCarousel";
+import API from "../../Context/ApiContext";
+import axios from "axios";
+import HomepageSectionTitle from "../../Components/HomepageSectionTitle";
 function Home() {
+  const category = [
+    {
+      title: "Acting",
+      api: "https://amanuel.com",
+      subTit: "Compete | Enjoy | Win",
+      route: "music",
+      img: actingThemnail,
+    },
+    {
+      title: "Music",
+      api: "https://amanuel.com",
+      subTit: "Compete | Enjoy | Win",
+      route: "music",
+      img: musicThemnail,
+    },
+    {
+      title: "Comedy",
+      api: "https://amanuel.com",
+      subTit: "Compete | Enjoy | Win",
+      route: "comedy",
+      img: commedyThemnail,
+    },
+    {
+      title: "Dance",
+      api: "https://amanuel.com",
+      subTit: "Compete | Enjoy | Win",
+      route: "dance",
+      img: danceThemnail,
+    },
+  ];
+  const [mostVoted, setMostVoted] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLMAgTa0j90_iF3V36cPtoZ9c1Gs6dBjLy&maxResults=7&key=AIzaSyAXl9SN87qrh0nRpW1Z9HhiPwSV-Tgm2GM`
+      )
+      .then((response) => {
+        console.log(response.data.items);
+        const allVideos = response.data.items;
+        setMostVoted(allVideos.slice(0, 4));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
-    <div className=" w-full ">
-      <Carousel />
-      <div className=" w-full ">
-        <div className=" py-10">
-          <h1 className=" text-center pb-5 text-3xl font-bold text-slate-600">
-            Category
-          </h1>
-          <hr className=" mx-10 " />
-        </div>
+    <div className=" w-full grid justify-center px-3">
+      <div className=" w-full flex justify-center">
+        <ReactCarousel />
+      </div>
 
-        <div className=" flex justify-center w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
+      <div className=" categories">
+        <HomepageSectionTitle title={"Category"} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5 w-full justify-center">
+          {category.map((category) => (
             <Category
-              descriptin={"Acting"}
-              subTit={"Compete | Enjoy | Win"}
-              api={"https://amanuel.com"}
-              route={"acting"}
+              title={category.title}
+              subTit={category.subTit}
+              api={API}
+              route={category.route}
+              img={category.img}
             />
-            <Category
-              descriptin={"Music"}
-              subTit={"Compete | Enjoy | Win"}
-              api={"https://abel.com"}
-              route={"music"}
-            />
-            <Category
-              descriptin={"Commedy"}
-              subTit={"Compete | Enjoy | Win"}
-              api={"https://jash.com"}
-              route={"commedy"}
-            />
-            <Category
-              descriptin={"Dance"}
-              subTit={"Compete | Enjoy | Win"}
-              api={"https://seyoum.com"}
-              route={"dance"}
-            />
-          </div>
+          ))}
         </div>
       </div>
 
-      <div className=" w-full ">
-        <div className=" py-10">
-          <h1 className=" text-center pb-5 text-3xl font-bold text-slate-600">
-            Most voted
-          </h1>
-          <hr className=" mx-10 " />
-        </div>
-
-        <div className=" flex justify-center w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
-            <CategoryTwo
-              descriptin={"Amazing stage prformance the made the juges..."}
-              name={"Amanuel"}
+      <div className="  most_voted">
+        <HomepageSectionTitle title={"Most Voted"} />
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
+          {mostVoted.map((video) => (
+            <VideoComponent
+              description={video.snippet.description}
+              name={"Amanuel Wonde"}
               vote={"1230"}
+              img={video.snippet.thumbnails.high.url}
+              url={`https://www.youtube.com/watch?v=${video.contentDetails.videoId}`}
+              route={"videos/music"}
             />
-            <CategoryTwo
-              descriptin={"Amazing stage prformance the made the juges..."}
-              name={"Amanuel"}
-              vote={"1230"}
-            />
-            <CategoryTwo
-              descriptin={"Amazing stage prformance the made the juges..."}
-              name={"Amanuel"}
-              vote={"1230"}
-            />
-            <CategoryTwo
-              descriptin={"Amazing stage prformance the made the juges..."}
-              name={"Amanuel"}
-              vote={"1230"}
-            />
-          </div>
+          ))}
         </div>
       </div>
-      <div className=" w-full ">
-        <div className=" py-10">
-          <h1 className=" text-center pb-5 text-3xl font-bold text-slate-600">
-            News
-          </h1>
-          <hr className=" mx-10 " />
-        </div>
 
-        <div className=" flex justify-center w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
-            <Category
-              descriptin={"Amaing opportunity for those who wants..."}
-            />
-            <Category
-              descriptin={"Amaing opportunity for those who wants..."}
-            />
-            <Category
-              descriptin={"Amaing opportunity for those who wants..."}
-            />
+      <div className=" new">
+        <HomepageSectionTitle title={"News"} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-5">
+          <Category
+            title={"Amazing opportunity for those who wants..."}
+            img={commedyThemnail}
+          />
+          <Category
+            title={"Amazing opportunity for those who wants..."}
+            img={commedyThemnail}
+          />
+          <Category
+            title={"Amazing opportunity for those who wants..."}
+            img={commedyThemnail}
+          />
 
-            <div className="font-bold text-2xl text-blue-700 align-text-bottom cursor-pointer md:pt-64 hover:text-blue-900">
-              <p className=" ">
-                See more news{" "}
-                <span>
-                  <ArrowRightAltIcon />
-                </span>
-              </p>
-              <hr className=" w-52" />
-            </div>
+          <div className="font-bold text-2xl text-blue-700 align-text-bottom cursor-pointer md:pt-64 hover:text-blue-900">
+            <p className=" ">
+              See more news{" "}
+              <span>
+                <ArrowRightAltIcon />
+              </span>
+            </p>
+            <hr className=" w-52" />
           </div>
         </div>
       </div>

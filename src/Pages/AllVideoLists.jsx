@@ -1,19 +1,31 @@
-import React, { useEffect } from "react";
-import CategoryTwo from "./Home/CategoryTwo";
+import React, { useEffect, useState } from "react";
+import VideoComponent from "./Home/VideoComponent";
 import VideoPlayer from "../Components/VideoPlayer/VideoPlayer";
 import { useVideo } from "../Context/NewVideo";
 import { useApi } from "../Context/ApiContext";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 function AllVideoLists() {
-  const { routeParam } = useParams();
+  const [allVideos, setAllVideos] = useState([]);
   const video = useVideo();
   const api = useApi();
-  console.log(api);
-  useEffect(() => {}, [routeParam]);
+  // console.log(api);
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=PLMAgTa0j90_iF3V36cPtoZ9c1Gs6dBjLy&maxResults=20&key=AIzaSyAXl9SN87qrh0nRpW1Z9HhiPwSV-Tgm2GM`
+      )
+      .then((response) => {
+        console.log(response.data.items);
+        setAllVideos(response.data.items);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
-    <div className=" grid justify-center">
-      <div className=" pt-3">
+    <div className="">
+      <div className=" pt-3 mx-3">
         {Object.keys(video).length ? (
           <VideoPlayer
             url={video.url}
@@ -25,59 +37,19 @@ function AllVideoLists() {
           ""
         )}
         <div
-          className={`${
-            Object.keys(video).length ? "pl-12" : ""
-          } grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8`}
+          className={`
+          } grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center`}
         >
-          <CategoryTwo
-            id={1}
-            description={"Here is an amazing stage Here is an amazing stage"}
-            name={"Abel seyoum"}
-            vote={100}
-            url={"https://youtu.be/IO-bb9RD04U"}
-          />
-          <CategoryTwo
-            id={2}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Amanuel wonde"}
-            vote={1230}
-            url={"https://youtu.be/aGHCyzVqfrQ"}
-          />
-          <CategoryTwo
-            id={2}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Amanuel wonde"}
-            vote={1230}
-            url={"https://youtu.be/aGHCyzVqfrQ"}
-          />
-          <CategoryTwo
-            id={2}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Amanuel wonde"}
-            vote={1230}
-            url={"https://youtu.be/aGHCyzVqfrQ"}
-          />
-          <CategoryTwo
-            id={2}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Amanuel wonde"}
-            vote={1230}
-            url={"https://youtu.be/aGHCyzVqfrQ"}
-          />
-          <CategoryTwo
-            id={2}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Amanuel wonde"}
-            vote={1230}
-            url={"https://youtu.be/aGHCyzVqfrQ"}
-          />
-          <CategoryTwo
-            id={1}
-            description={"Here is an amazing stage performance that ..."}
-            name={"Abel seyoum"}
-            vote={100}
-            url={"https://youtu.be/IO-bb9RD04U"}
-          />
+          {allVideos.map((video) => (
+            <VideoComponent
+              id={1}
+              description={video.snippet.description}
+              name={"Amanuel Wonde"}
+              vote={1025}
+              url={`https://www.youtube.com/watch?v=${video.contentDetails.videoId}`}
+              img={video.snippet.thumbnails.high.url}
+            />
+          ))}
         </div>
       </div>
     </div>

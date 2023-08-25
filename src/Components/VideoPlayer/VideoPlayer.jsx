@@ -11,18 +11,19 @@ function VideoPlayer({ description, votes, name, url }) {
     }
   };
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className=" rounded-lg ">
-        <div className=" relative pt-[56.25%]">
+        <div className=" relative pt-[.25%] ">
           <ReactPlayer
-            className=" absolute top-0 left-0"
+            className="  top-0 left-0 h-[500px]"
             controls
             url={`${url}`}
             width="100%"
-            height="100%"
+            // height="100%"
             playing={true}
           />
         </div>
+
         <div className=" w-full">
           <p className=" text-xl pl-3 text-slate-950 font-bold">
             {description}

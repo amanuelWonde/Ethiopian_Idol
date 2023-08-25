@@ -1,8 +1,8 @@
 import React from "react";
-import img from "../../Images/andras-vas-Bd7gNnWJBkU-unsplash.jpg";
 import { useVideoDispatch } from "../../Context/NewVideo";
-
-function CategoryTwo({ vote, name, description, id, url }) {
+import TruncatedParagraph from "../../Components/TruncatedParagraph";
+import { Link } from "react-router-dom";
+function CategoryTwo({ vote, name, description, id, url, img, route }) {
   const dispatch = useVideoDispatch();
   const dispatchVideo = () => {
     dispatch({
@@ -13,16 +13,23 @@ function CategoryTwo({ vote, name, description, id, url }) {
       description: description,
       vote: vote,
     });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
   return (
-    <div onClick={dispatchVideo}>
-      <div className="h-80 w-64 shadow-lg cursor-pointer rounded-md bg-slate-100 max-h-80">
+    <div
+      onClick={dispatchVideo}
+      className="sm:h-64 h-80 hover:scale-105 border-gray-300 sm:w-72 w-full cursor-pointer rounded-md bg-white hover:shadow-xl duration-700"
+    >
+      <Link to={route}>
         <div
           style={{ backgroundImage: `url(${img})` }}
-          className={`bg-no-repeat bg-center bg-cover rounded h-[70%] w-full`}
+          className={`bg-no-repeat bg-center bg-cover rounded h-[65%] w-full`}
         ></div>
         <div className=" px-2 pt-2">
-          <p className=" text-base font-bold text-slate-600">{description}</p>
+          <TruncatedParagraph description={description} characterLimit={56} />
           <p className=" opacity-60">
             {" "}
             {name}{" "}
@@ -31,7 +38,7 @@ function CategoryTwo({ vote, name, description, id, url }) {
             </span>
           </p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

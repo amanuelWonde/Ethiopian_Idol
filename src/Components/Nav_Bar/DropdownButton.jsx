@@ -1,80 +1,68 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function DropdownButton() {
   const [dropList, setDropList] = useState("hidden");
   const dropDown = () => {
-    if (dropList == "hidden") setDropList("block");
-    else setDropList("hidden");
+    setDropList("block");
+  };
+  const dropDownClose = () => {
+    setDropList("hidden");
   };
   return (
     <div>
       {" "}
-      <div className=" mr-3">
-        <button
-          id="dropdownDefaultButton"
-          data-dropdown-toggle="dropdown"
-          className="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          type="button"
-          onClick={dropDown}
-        >
-          Dropdown button{" "}
-          <svg
-            class="w-2.5 h-2.5 ml-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
+      <div
+        className={` mr-6 flex sm:inline-block `}
+        onMouseOver={dropDown}
+        onMouseOut={dropDownClose}
+      >
+        <div className=" mr-6 block sm:py-2 py-0 pl-3 pr-4 text-gray-900 sm:text-lg sm:font-bold sm:text-white rounded hover:text-yellow-600  md:hover:bg-transparent md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer">
+          Categories
+        </div>
+        <div className=" pt-4">
+          <div
+            id="dropdown"
+            className={`z-10 pt-2 ${dropList} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute`}
           >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 4 4 4-4"
-            />
-          </svg>
-        </button>
-        <div
-          id="dropdown"
-          className={`z-10 mt-1 ${dropList} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute`}
-        >
-          <ul
-            className="py-2 text-sm text-gray-700 dark:text-gray-200"
-            aria-labelledby="dropdownDefaultButton"
-          >
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Music
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Dance
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Acting
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              >
-                Comedy
-              </a>
-            </li>
-          </ul>
+            <ul
+              className="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <Link
+                  to={"/videos/music"}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Music
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/videos/dance"}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Dance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/videos/acting"}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Acting
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/videos/comedy"}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  Comedy
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

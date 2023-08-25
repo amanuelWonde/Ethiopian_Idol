@@ -13,7 +13,7 @@ import Contacts from "./Pages/Contacts";
 import ApiProvider, { useApi } from "./Context/ApiContext";
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-100">
       <VideoProvider>
         <ApiProvider>
           <Nav />
