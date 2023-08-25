@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/Ethiopian_Idol/static/css/main.ae785f60.css",
-    "main.js": "/Ethiopian_Idol/static/js/main.046c0248.js",
+    "main.css": "/Ethiopian_Idol/static/css/main.2f528290.css",
+    "main.js": "/Ethiopian_Idol/static/js/main.762030d7.js",
+    "static/media/ethiopian_idol_logo-06.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo-06.1ecbb3bd23e51f41ae1e.png",
+    "static/media/ethiopian_idol_logo2.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo2.48e06c18d3d941458e98.png",
+    "static/media/profile-pic.jpg": "/Ethiopian_Idol/static/media/profile-pic.9fa05915fc268a8ec28b.jpg",
+    "static/media/aditya-ali-SzI4No8rQ14-unsplash.jpg": "/Ethiopian_Idol/static/media/aditya-ali-SzI4No8rQ14-unsplash.751285efc0db231188c7.jpg",
     "static/media/andras-vas-Bd7gNnWJBkU-unsplash.jpg": "/Ethiopian_Idol/static/media/andras-vas-Bd7gNnWJBkU-unsplash.955a61ef1757f54fcf83.jpg",
     "static/media/domenico-loia-hGV2TfOh0ns-unsplash.jpg": "/Ethiopian_Idol/static/media/domenico-loia-hGV2TfOh0ns-unsplash.d0943fbd57313ac0217f.jpg",
     "static/media/designecologist-Pmh0UoG1vlE-unsplash.jpg": "/Ethiopian_Idol/static/media/designecologist-Pmh0UoG1vlE-unsplash.89aab57f4d47cc67ec04.jpg",
+    "static/media/Ethiopian_Broadcasting_Corporation.svg.png": "/Ethiopian_Idol/static/media/Ethiopian_Broadcasting_Corporation.svg.5939301f8e0e5d3831a0.png",
+    "static/media/jon-tyson-A-obUh61bKw-unsplash.jpg": "/Ethiopian_Idol/static/media/jon-tyson-A-obUh61bKw-unsplash.becb00cdedfa9bbf0e62.jpg",
     "static/media/kari-shea-1SAnrIxw5OY-unsplash.jpg": "/Ethiopian_Idol/static/media/kari-shea-1SAnrIxw5OY-unsplash.0989898fac15bd57d713.jpg",
+    "static/media/michel-grolet-NBRNK4XC1k8-unsplash.jpg": "/Ethiopian_Idol/static/media/michel-grolet-NBRNK4XC1k8-unsplash.96f7d17b63c315d52395.jpg",
+    "static/media/matt-botsford-OKLqGsCT8qs-unsplash.jpg": "/Ethiopian_Idol/static/media/matt-botsford-OKLqGsCT8qs-unsplash.464a56a5605fe67075d9.jpg",
     "static/media/tianyi-ma-WiONHd_zYI4-unsplash.jpg": "/Ethiopian_Idol/static/media/tianyi-ma-WiONHd_zYI4-unsplash.d3527ac8b820627db0ab.jpg",
     "index.html": "/Ethiopian_Idol/index.html",
-    "main.ae785f60.css.map": "/Ethiopian_Idol/static/css/main.ae785f60.css.map",
-    "main.046c0248.js.map": "/Ethiopian_Idol/static/js/main.046c0248.js.map"
+    "main.2f528290.css.map": "/Ethiopian_Idol/static/css/main.2f528290.css.map",
+    "main.762030d7.js.map": "/Ethiopian_Idol/static/js/main.762030d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae785f60.css",
-    "static/js/main.046c0248.js"
+    "static/css/main.2f528290.css",
+    "static/js/main.762030d7.js"
   ]
 }
