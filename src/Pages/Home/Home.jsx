@@ -88,7 +88,7 @@ function Home() {
               vote={"1230"}
               img={video.snippet.thumbnails.high.url}
               url={`https://www.youtube.com/watch?v=${video.contentDetails.videoId}`}
-              route={"videos/music"}
+              route={"/videos/music"}
             />
           ))}
         </div>
