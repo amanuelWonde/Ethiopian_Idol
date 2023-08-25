@@ -18,7 +18,7 @@ function App() {
         <ApiProvider>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Ethiopian_Idol" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/videos/:routeParam" element={<AllVideoLists />} />
             <Route path="/apply" element={<Register />} />
