@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ethiopian_Idol/static/css/main.2f528290.css",
-    "main.js": "/Ethiopian_Idol/static/js/main.039db411.js",
+    "main.js": "/Ethiopian_Idol/static/js/main.917e0483.js",
     "static/media/ethiopian_idol_logo-06.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo-06.1ecbb3bd23e51f41ae1e.png",
     "static/media/ethiopian_idol_logo2.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo2.48e06c18d3d941458e98.png",
     "static/media/profile-pic.jpg": "/Ethiopian_Idol/static/media/profile-pic.9fa05915fc268a8ec28b.jpg",
@@ -17,10 +17,10 @@
     "static/media/tianyi-ma-WiONHd_zYI4-unsplash.jpg": "/Ethiopian_Idol/static/media/tianyi-ma-WiONHd_zYI4-unsplash.d3527ac8b820627db0ab.jpg",
     "index.html": "/Ethiopian_Idol/index.html",
     "main.2f528290.css.map": "/Ethiopian_Idol/static/css/main.2f528290.css.map",
-    "main.039db411.js.map": "/Ethiopian_Idol/static/js/main.039db411.js.map"
+    "main.917e0483.js.map": "/Ethiopian_Idol/static/js/main.917e0483.js.map"
   },
   "entrypoints": [
     "static/css/main.2f528290.css",
-    "static/js/main.039db411.js"
+    "static/js/main.917e0483.js"
   ]
 }
