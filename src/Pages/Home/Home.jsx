@@ -46,7 +46,7 @@ function Home() {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLMAgTa0j90_iF3V36cPtoZ9c1Gs6dBjLy&maxResults=7&key=AIzaSyAXl9SN87qrh0nRpW1Z9HhiPwSV-Tgm2GM`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=PLMAgTa0j90_iF3V36cPtoZ9c1Gs6dBjLy&maxResults=20&key=AIzaSyAXl9SN87qrh0nRpW1Z9HhiPwSV-Tgm2GM`
       )
       .then((response) => {
         console.log(response.data.items);

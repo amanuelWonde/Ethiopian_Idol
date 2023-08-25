@@ -26,7 +26,7 @@ function Nav() {
     <div className="">
       <div className=" h-14 bg-gray-100 md:hidden  px-2 sm:px-2 md:px-4">
         <div className=" flex justify-between px-2 py-1 ">
-          <Link to={"/"}>
+          <Link to={"/Ethiopian_Idol"}>
             <div
               className=" text-xl font-bold text-black-100 cursor-pointer"
               onClick={deleteVideo}
@@ -73,7 +73,7 @@ function Nav() {
         <div className=" hidden md:block">
           <div className=" flex justify-between ">
             <div className="">
-              <Link to={"/"}>
+              <Link to={"/Ethiopian_Idol"}>
                 <div
                   onClick={deleteVideo}
                   className=" text-4xl cursor-pointer font-bold text-slate-50"
