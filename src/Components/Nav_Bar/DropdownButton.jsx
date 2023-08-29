@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "react-feather";
 
 function DropdownButton() {
   const [dropList, setDropList] = useState("hidden");
@@ -11,15 +12,18 @@ function DropdownButton() {
   };
   return (
     <div>
-      {" "}
       <div
-        className={` mr-6 flex sm:inline-block `}
+        className={`flex space-x-3 sm:inline-block`}
         onMouseOver={dropDown}
         onMouseOut={dropDownClose}
       >
-        <div className=" mr-6 block sm:py-2 py-0 pl-3 pr-4 text-gray-900 sm:text-lg sm:font-bold sm:text-white rounded hover:text-yellow-600  md:hover:bg-transparent md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer">
-          Categories
+        <div className="flex cursor-pointer ">
+          <p className="">Categories</p>{" "}
+          <div className=" ">
+            <ChevronDown style={{ fontSize: "3px", marginTop: "4px" }} />
+          </div>
         </div>
+
         <div className=" pt-4">
           <div
             id="dropdown"

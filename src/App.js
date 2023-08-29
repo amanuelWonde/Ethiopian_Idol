@@ -8,24 +8,31 @@ import AllVideoLists from "./Pages/AllVideoLists";
 import VideoProvider from "./Context/NewVideo";
 import Footer from "./Components/Footer/Footer";
 import Register from "./Pages/Forms/Register";
-import AudienceForm from "./Pages/Forms/AudienceForm";
 import Contacts from "./Pages/Contacts";
 import ApiProvider, { useApi } from "./Context/ApiContext";
+import UserDataContext from "./Context/UserContext";
+import Signup from "./Pages/Forms/Form/Signup";
+import { LogIn } from "react-feather";
+import Login from "./Pages/Forms/Form/Login";
+import Checkout from "./Components/Payment/Checkout";
 function App() {
   return (
     <div className="App bg-slate-100">
       <VideoProvider>
         <ApiProvider>
-          <Nav />
-          <Routes>
-            <Route path="/Ethiopian_Idol" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/videos/:routeParam" element={<AllVideoLists />} />
-            <Route path="/apply" element={<Register />} />
-            <Route path="/login" element={<AudienceForm />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-          <Footer />
+          <UserDataContext>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/videos/:routeParam" element={<AllVideoLists />} />
+              <Route path="/register" element={<Signup />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+            <Footer />
+          </UserDataContext>
         </ApiProvider>
       </VideoProvider>
     </div>
