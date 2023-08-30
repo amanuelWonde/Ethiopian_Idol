@@ -29,7 +29,7 @@ function Nav() {
             onClick={deleteVideo}
             className=" text-4xl cursor-pointer font-bold text-slate-50"
           >
-            <Link to={"/Ethiopian_Idol"}>
+            <Link to={"/"}>
               <img
                 src={logo}
                 className=" h-16 font-extrabold grid justify-center"

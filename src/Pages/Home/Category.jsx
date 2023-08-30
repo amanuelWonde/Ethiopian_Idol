@@ -12,7 +12,7 @@ function Category({ title, api, subTit, route, img }) {
     });
   };
   return (
-    <div className="sm:h-64 h-72 sm:w-72 w-full cursor-pointer rounded-md  bg-white hover:shadow-xl duration-700 hover:scale-105">
+    <div className="sm:h-64 h-72 sm:w-80 w-full cursor-pointer rounded-md  bg-white hover:shadow-xl duration-700 hover:scale-105">
       <Link to={`/videos/${route}`}>
         <div
           style={{ backgroundImage: `url(${img})` }}

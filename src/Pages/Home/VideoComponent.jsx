@@ -22,7 +22,7 @@ function CategoryTwo({ vote, name, description, id, url, img, route }) {
     <div
       key={id}
       onClick={dispatchVideo}
-      className="sm:w-72 sm:h-64 h-80 hover:scale-105 border-gray-300 cursor-pointer rounded-md bg-white hover:shadow-xl duration-700"
+      className="sm:w-80 sm:h-64 h-80 hover:scale-105 border-gray-300 cursor-pointer rounded-md bg-white hover:shadow-xl duration-700"
     >
       <Link to={route}>
         <div

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserDispatch } from "../../../Context/UserContext";
-
+import logo from "../../../Images/logos/ethiopian_idol_logo-06.png";
 function Signup() {
   const dispatch = useUserDispatch();
   const navigate = useNavigate();
@@ -11,9 +11,11 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+
   const handleUserTypeChange = (newUserType) => {
     setUserType(newUserType);
   };
+
   const handleSignup = () => {
     dispatch({
       type: "user",
@@ -23,13 +25,24 @@ function Signup() {
     });
     navigate("/");
   };
+
   return (
     <div>
       <body className="bg-gray-100">
-        <div className="container mx-auto py-6">
-          <h1 className="text-2xl font-bold mb-6 text-center">
-            Registration Form
-          </h1>
+        <div className="container mx-auto py-2">
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 items-center">
+              <img
+                src={logo} // Replace `logo` with the path to your logo image
+                alt="Company Logo"
+                className="w-40"
+              />
+              <h1 className="text-3xl font-bold text-center text-yellow-500">
+                Join Us
+              </h1>
+            </div>
+          </div>
+
           <form className="w-full max-w-sm mx-auto bg-white p-8 rounded-md shadow-md">
             <div className="mb-4">
               <button
@@ -38,7 +51,10 @@ function Signup() {
                     ? "bg-blue-500 text-white"
                     : "bg-gray-300 text-gray-700"
                 }`}
-                onClick={() => handleUserTypeChange("contestant")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleUserTypeChange("contestant");
+                }}
               >
                 Contestant
               </button>
@@ -49,7 +65,10 @@ function Signup() {
                     ? "bg-blue-500 text-white"
                     : "bg-gray-300 text-gray-700"
                 }`}
-                onClick={() => handleUserTypeChange("user")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleUserTypeChange("user");
+                }}
               >
                 User
               </button>
@@ -66,7 +85,7 @@ function Signup() {
                   id="categories"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
-                  <option selected>Choose a category</option>
+                  <option selected>Choose category</option>
                   <option value="Singing">Singing</option>
                   <option value="Dancing">Dancing</option>
                   <option value="Comedy">Comedy</option>

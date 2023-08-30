@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "../../Components/Carousel";
 import Category from "./Category";
 import VideoComponent from "./VideoComponent";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
@@ -11,6 +10,7 @@ import ReactCarousel from "../../Components/ReactCarousel";
 import API from "../../Context/ApiContext";
 import axios from "axios";
 import HomepageSectionTitle from "../../Components/HomepageSectionTitle";
+import Judges from "./Judges";
 function Home() {
   const category = [
     {

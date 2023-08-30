@@ -40,7 +40,7 @@ function Checkout() {
         <input
           type="hidden"
           name="return_url"
-          value="http://localhost:3000/Ethiopian_Idol"
+          value="https://amanuelwonde.github.io/Ethiopian_Idol/"
         />
         <input type="hidden" name="meta[title]" value="test" />
         <div class="container flex flex-col justify-center items-center mx-auto my-8 py-10">
