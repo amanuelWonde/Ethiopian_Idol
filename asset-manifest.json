@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Ethiopian_Idol/static/css/main.f6149895.css",
-    "main.js": "/Ethiopian_Idol/static/js/main.14231adc.js",
+    "main.css": "/Ethiopian_Idol/static/css/main.53bd6496.css",
+    "main.js": "/Ethiopian_Idol/static/js/main.ce48cdcb.js",
+    "static/media/ethiopian_idol_logo-06.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo-06.1ecbb3bd23e51f41ae1e.png",
     "static/media/ethiopian_idol_logo2.png": "/Ethiopian_Idol/static/media/ethiopian_idol_logo2.48e06c18d3d941458e98.png",
     "static/media/profile-pic.jpg": "/Ethiopian_Idol/static/media/profile-pic.9fa05915fc268a8ec28b.jpg",
     "static/media/aditya-ali-SzI4No8rQ14-unsplash.jpg": "/Ethiopian_Idol/static/media/aditya-ali-SzI4No8rQ14-unsplash.751285efc0db231188c7.jpg",
@@ -12,14 +13,13 @@
     "static/media/kari-shea-1SAnrIxw5OY-unsplash.jpg": "/Ethiopian_Idol/static/media/kari-shea-1SAnrIxw5OY-unsplash.0989898fac15bd57d713.jpg",
     "static/media/michel-grolet-NBRNK4XC1k8-unsplash.jpg": "/Ethiopian_Idol/static/media/michel-grolet-NBRNK4XC1k8-unsplash.96f7d17b63c315d52395.jpg",
     "static/media/matt-botsford-OKLqGsCT8qs-unsplash.jpg": "/Ethiopian_Idol/static/media/matt-botsford-OKLqGsCT8qs-unsplash.464a56a5605fe67075d9.jpg",
-    "static/media/tianyi-ma-WiONHd_zYI4-unsplash.jpg": "/Ethiopian_Idol/static/media/tianyi-ma-WiONHd_zYI4-unsplash.d3527ac8b820627db0ab.jpg",
     "static/media/etv-building.jpeg": "/Ethiopian_Idol/static/media/etv-building.c56a585efcc1f8b63a13.jpeg",
     "index.html": "/Ethiopian_Idol/index.html",
-    "main.f6149895.css.map": "/Ethiopian_Idol/static/css/main.f6149895.css.map",
-    "main.14231adc.js.map": "/Ethiopian_Idol/static/js/main.14231adc.js.map"
+    "main.53bd6496.css.map": "/Ethiopian_Idol/static/css/main.53bd6496.css.map",
+    "main.ce48cdcb.js.map": "/Ethiopian_Idol/static/js/main.ce48cdcb.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6149895.css",
-    "static/js/main.14231adc.js"
+    "static/css/main.53bd6496.css",
+    "static/js/main.ce48cdcb.js"
   ]
 }
